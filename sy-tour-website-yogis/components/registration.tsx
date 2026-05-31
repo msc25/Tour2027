@@ -91,33 +91,26 @@ export default function Registration() {
             />
           </div>
         ) : (
-          /* Placeholder when no form URL is set yet */
-          <div className="rounded-2xl border-2 border-dashed border-teal/30 bg-white p-12 text-center">
-            <div className="w-16 h-16 rounded-full bg-teal/10 flex items-center justify-center mx-auto mb-6">
-              <ExternalLink className="h-7 w-7 text-teal" />
-            </div>
-            <h3 className="font-heading text-2xl font-bold text-teal-dark mb-3">
-              Registration Opening Soon
-            </h3>
-            <p className="text-muted-foreground max-w-sm mx-auto mb-8 leading-relaxed">
-              The registration form will be available here once the tour is
-              officially announced. Stay connected with your local collective
-              for updates.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button
-                size="lg"
-                className="bg-[#65B784] hover:bg-[#65B784]/90 text-white rounded-full px-8"
-                onClick={() =>
-                  window.open("mailto:mediatecanada2027@gmail.com", "_blank")
-                }
-              >
-                Express Interest by Email
-              </Button>
-              <a href="#contact">
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
+            {/* Card A: Registration Status */}
+            <div className="rounded-2xl border-2 border-dashed border-teal/30 bg-white p-8 md:p-10 text-center flex flex-col justify-between">
+              <div>
+                <div className="w-14 h-14 rounded-full bg-teal/10 flex items-center justify-center mx-auto mb-6">
+                  <ExternalLink className="h-6 w-6 text-teal" />
+                </div>
+                <h3 className="font-heading text-2xl font-bold text-teal-dark mb-3">
+                  Registration Opening Soon
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                  The registration form will be available here once the tour is
+                  officially announced. Stay connected with your local collective
+                  for updates.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center mt-auto">
                 <Button
                   size="default"
-                  className="bg-teal hover:bg-teal/90 text-white rounded-full px-6 py-2 text-sm"
+                  className="bg-[#65B784] hover:bg-[#65B784]/90 text-white rounded-full px-6 py-2 text-sm"
                   onClick={() =>
                     window.open("mailto:mediatecanada2027@gmail.com", "_blank")
                   }
@@ -128,7 +121,7 @@ export default function Registration() {
                   <Button
                     size="default"
                     variant="outline"
-                    className="rounded-full px-6 py-2 text-sm border-teal text-teal hover:bg-teal/5 w-full"
+                    className="rounded-full px-6 py-2 text-sm border-[#65B784] text-[#65B784] hover:bg-[#65B784]/5 w-full"
                   >
                     Contact the Team
                   </Button>
@@ -155,7 +148,7 @@ export default function Registration() {
                     onClick={() => setPaymentMethod("etransfer")}
                     className={`py-2.5 px-3 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5 transition-all duration-200 ${
                       paymentMethod === "etransfer"
-                        ? "bg-teal text-white shadow-sm"
+                        ? "bg-[#65B784] text-white shadow-sm"
                         : "text-muted-foreground hover:text-teal-dark"
                     }`}
                   >
@@ -166,7 +159,7 @@ export default function Registration() {
                     onClick={() => setPaymentMethod("card")}
                     className={`py-2.5 px-3 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5 transition-all duration-200 ${
                       paymentMethod === "card"
-                        ? "bg-teal text-white shadow-sm"
+                        ? "bg-[#65B784] text-white shadow-sm"
                         : "text-muted-foreground hover:text-teal-dark"
                     }`}
                   >
@@ -251,7 +244,7 @@ export default function Registration() {
                             
                             <Button
                               type="submit"
-                              className="w-full bg-teal hover:bg-teal/90 text-white rounded-full py-2.5 text-xs flex items-center justify-center gap-1.5 mt-2"
+                              className="w-full bg-[#65B784] hover:bg-[#65B784]/90 text-white rounded-full py-2.5 text-xs flex items-center justify-center gap-1.5 mt-2"
                             >
                               <Lock className="h-3 w-3" />
                               Pay $1,250 CAD Securely
@@ -296,7 +289,7 @@ export default function Registration() {
                 <div className="mt-6">
                   <Button
                     onClick={handleCopy}
-                    className="w-full bg-teal hover:bg-teal/90 text-white rounded-full py-3 flex items-center justify-center gap-2 transition-all duration-200"
+                    className="w-full bg-[#65B784] hover:bg-[#65B784]/90 text-white rounded-full py-3 flex items-center justify-center gap-2 transition-all duration-200"
                   >
                     {copied ? (
                       <>
